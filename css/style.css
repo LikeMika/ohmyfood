@@ -1,6 +1,112 @@
 body {
   font: 100% "Raleway", sans-serif;
   color: black;
+  margin: 0;
+}
+
+button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 25px 0 25px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+}
+header .logo img {
+  height: 36px;
+}
+header .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  font-size: 16px;
+  gap: 17px;
+  font-weight: bold;
+  background-color: #EAEAEA;
+  filter: drop-shadow(1px 2px 5px grey);
+}
+
+.intro {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 20px;
+}
+
+.fonctionnement {
+  padding: 25px;
+  margin-bottom: 20px;
+}
+.fonctionnement .liste_etapes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  gap: 25px;
+}
+.fonctionnement .liste_etapes .etape {
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  height: 72px;
+  gap: 20px;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+}
+.fonctionnement .liste_etapes .etape .rond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9356DC;
+  border: solid 1px #9356DC;
+  color: white;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  margin-left: -10px;
+}
+.fonctionnement .liste_etapes .etape i {
+  color: #7E7E7E;
+  height: 20px;
+}
+.fonctionnement .liste_etapes .etape .etape_texte {
+  font-weight: bold;
+}
+
+.restaurant {
+  padding: 20px;
+  background-color: #F6F6F6;
+}
+.restaurant .liste_restaurants {
+  display: flex;
+  flex-direction: column;
+}
+.restaurant .liste_restaurants .card {
+  background-color: white;
+  border-radius: 20px;
+}
+.restaurant .liste_restaurants .card img {
+  height: 231px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+}
+.restaurant .liste_restaurants .card .detail {
+  padding: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
