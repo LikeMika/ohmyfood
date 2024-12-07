@@ -93,20 +93,60 @@ header .location {
 .restaurant .liste_restaurants {
   display: flex;
   flex-direction: column;
+  gap: 18px;
+  margin-bottom: 35px;
 }
 .restaurant .liste_restaurants .card {
   background-color: white;
   border-radius: 20px;
 }
 .restaurant .liste_restaurants .card img {
-  height: 231px;
+  height: 200px;
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   object-fit: cover;
 }
-.restaurant .liste_restaurants .card .detail {
+.restaurant .liste_restaurants .card .card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   padding: 15px;
+}
+.restaurant .liste_restaurants .card .card-content .detail {
+  font-size: 17px;
+}
+.restaurant .liste_restaurants .card .card-content .detail h3 {
+  padding: 0;
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+.restaurant .liste_restaurants .card .card-content i {
+  font-size: 21px;
+}
+
+footer {
+  padding: 25px;
+  background-color: #353535;
+  font-size: 16px;
+  font-weight: 500;
+}
+footer img {
+  height: 27px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  line-height: 30px;
+}
+footer ul a {
+  text-decoration: none;
+  color: white;
+}
+footer ul a i {
+  width: 14px;
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

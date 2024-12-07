@@ -3,6 +3,7 @@ $primary-color: black;
 $button-color: linear-gradient(#FF79DA, #9356DC);
 $background-light-grey: #F6F6F6;
 $icon-grey:#7E7E7E;
+$footer-background:#353535;
 
 body
 {
@@ -96,18 +97,59 @@ header
     .liste_restaurants {
         display: flex;
         flex-direction: column;
+        gap: 18px;
+        margin-bottom: 35px;
         .card {
             background-color: white;
             border-radius: 20px;
             img {
-                height:231px;
+                height:200px;
                 width: 100%;
                 border-top-left-radius: 20px;
                 border-top-right-radius: 20px;
                 object-fit: cover;
             }
-            .detail {
-                padding: 15px;;
+            .card-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px;
+                .detail {
+                    font-size: 17px;
+                    h3 {
+                        padding: 0;
+                        margin: 0 0 5px 0;
+                        font-size: 18px;
+                    }
+                }
+                i {
+                    font-size: 21px;
+                }
+            }
+            
+        }
+    }
+}
+
+footer {
+    padding: 25px;
+    background-color: $footer-background;
+    font-size: 16px;
+    font-weight: 500;
+    img {
+        height: 27px;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        line-height: 30px;
+        a {
+            text-decoration: none;
+            color: white;
+            i {
+                width: 14px;
+                margin-right: 10px;
             }
         }
     }
