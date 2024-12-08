@@ -14,6 +14,10 @@ button {
   padding: 0 25px 0 25px;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -99,31 +103,47 @@ header .location {
 .restaurant .liste_restaurants .card {
   background-color: white;
   border-radius: 20px;
+  position: relative;
 }
-.restaurant .liste_restaurants .card img {
+.restaurant .liste_restaurants .card a {
+  color: black;
+}
+.restaurant .liste_restaurants .card a .image-restaurant {
   height: 200px;
   width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   object-fit: cover;
 }
-.restaurant .liste_restaurants .card .card-content {
+.restaurant .liste_restaurants .card a .nouveau {
+  height: 29px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.restaurant .liste_restaurants .card a .card-content {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
 }
-.restaurant .liste_restaurants .card .card-content .detail {
+.restaurant .liste_restaurants .card a .card-content .detail {
   font-size: 17px;
 }
-.restaurant .liste_restaurants .card .card-content .detail h3 {
+.restaurant .liste_restaurants .card a .card-content .detail h3 {
   padding: 0;
   margin: 0 0 5px 0;
   font-size: 18px;
 }
-.restaurant .liste_restaurants .card .card-content i {
+.restaurant .liste_restaurants .card i {
+  position: absolute;
+  right: 30px;
+  bottom: 35px;
   font-size: 21px;
+}
+.restaurant .liste_restaurants .card i:active {
+  color: green;
 }
 
 footer {
