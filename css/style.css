@@ -12,6 +12,10 @@ button {
   color: white;
   font-weight: bold;
   padding: 0 25px 0 25px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.85;
 }
 
 a {
@@ -89,6 +93,9 @@ header .location {
 .fonctionnement .liste_etapes .etape .etape_texte {
   font-weight: bold;
 }
+.fonctionnement .liste_etapes .etape:hover i {
+  color: #9356DC;
+}
 
 .restaurant {
   padding: 20px;
@@ -136,14 +143,18 @@ header .location {
   margin: 0 0 5px 0;
   font-size: 18px;
 }
-.restaurant .liste_restaurants .card i {
+.restaurant .liste_restaurants .card .heart {
+  width: 23px;
+  height: 21px;
   position: absolute;
   right: 30px;
   bottom: 35px;
-  font-size: 21px;
+  background-image: url("../images/heart.png");
+  cursor: pointer;
 }
-.restaurant .liste_restaurants .card i:active {
-  color: green;
+.restaurant .liste_restaurants .card .heart:active {
+  transition-duration: 400ms;
+  background-image: url("../images/heart-filled.png");
 }
 
 footer {

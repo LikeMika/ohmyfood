@@ -2,6 +2,7 @@ $font-main: 'Raleway', sans-serif;
 $primary-color: black;
 $button-color: linear-gradient(#FF79DA, #9356DC);
 $background-light-grey: #F6F6F6;
+$purple: #9356DC;
 $icon-grey:#7E7E7E;
 $footer-background:#353535;
 
@@ -19,6 +20,10 @@ button {
     color: white;
     font-weight: bold;
     padding: 0 25px 0 25px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.85;
+    }
 }
 a {
     text-decoration: none;
@@ -91,6 +96,12 @@ header
             .etape_texte{
                 font-weight: bold;
             }
+            &:hover {
+                i {
+                    color:$purple;
+                }
+                
+            }
         }
     }
 }
@@ -137,13 +148,18 @@ header
                     }   
                 }
             }
-            i {
+            .heart {
+                width: 23px;
+                height: 21px;
                 position: absolute;
                 right: 30px;
                 bottom: 35px;
-                font-size: 21px;
-                &:active{
-                    color: green;
+                background-image: url("../images/heart.png");
+                cursor: pointer;
+                &:active
+                {
+                    transition-duration: 400ms;
+                    background-image: url("../images/heart-filled.png");
                 }
             }
             
