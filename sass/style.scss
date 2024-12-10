@@ -54,7 +54,9 @@ header
         filter: drop-shadow(1px 2px 5px grey);
     }
 }
+main {
 
+}
 .intro {
     background-color: $background-light-grey;
     text-align: center;
@@ -63,12 +65,28 @@ header
 .fonctionnement {
     padding: 25px;
     margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 180px;
+        box-sizing: border-box;
+        margin: 0 auto;
+      }
     .liste_etapes {
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding-left: 10px;
         gap: 25px;
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 35px;
+            margin-bottom: 50px;
+          }
         .etape {
             display: flex;
             align-items: center;
@@ -76,6 +94,7 @@ header
             border-radius: 20px;
             height: 72px;
             gap: 20px;
+            width: 100%;
             filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
             .rond {
                 display: flex;
@@ -108,15 +127,41 @@ header
 .restaurant {
     padding: 20px;
     background-color: $background-light-grey;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 30px 0;
+        h2 {
+            width: 100%;
+            max-width: 1440px;
+            padding: 0 180px;
+            box-sizing: border-box;
+            margin: 30px auto;
+        }
+      }
     .liste_restaurants {
         display: flex;
         flex-direction: column;
         gap: 18px;
         margin-bottom: 35px;
+        @media screen and (min-width: 768px) {
+            max-width: 1440px;
+            padding: 0 180px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 50px;
+            margin: 0 auto;
+          }
         .card {
             background-color: white;
             border-radius: 20px;
             position: relative;
+            @media screen and (min-width: 768px) {
+                width: calc(48% - 20px);
+              }
             a {
                 color: $primary-color;
                 .image-restaurant {
