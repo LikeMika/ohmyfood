@@ -217,6 +217,12 @@ footer {
     background-color: $footer-background;
     font-size: 16px;
     font-weight: 500;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        align-items: center;
+      }
     img {
         height: 27px;
     }
@@ -224,6 +230,13 @@ footer {
         list-style: none;
         padding: 0;
         line-height: 30px;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            margin-right: 25px;
+            gap: 25px;
+          }
         a {
             text-decoration: none;
             color: white;
