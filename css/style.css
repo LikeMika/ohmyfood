@@ -1,3 +1,53 @@
+@keyframes spinAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cssAnimation2 {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  color: black;
+  animation: cssAnimation 2s forwards;
+  text-align: center;
+}
+.loader i {
+  animation: spinAnimation 1s infinite;
+  animation-timing-function: linear;
+  display: inline-block;
+  color: black;
+  font-size: 60px;
+}
+
 body {
   font: 100% "Raleway", sans-serif;
   color: black;
@@ -20,6 +70,10 @@ button:hover {
 
 a {
   text-decoration: none;
+}
+
+.main-container {
+  animation: cssAnimation2 2s forwards;
 }
 
 header {
