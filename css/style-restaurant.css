@@ -1,0 +1,307 @@
+@keyframes spinAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes cssAnimation2 {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  color: black;
+  animation: cssAnimation 2s forwards;
+  text-align: center;
+}
+.loader i {
+  animation: spinAnimation 1s infinite;
+  animation-timing-function: linear;
+  display: inline-block;
+  color: black;
+  font-size: 60px;
+}
+
+body {
+  font: 100% "Raleway", sans-serif;
+  color: black;
+  margin: 0;
+}
+
+button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 25px 0 25px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.85;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  animation: cssAnimation2 2s forwards;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+}
+header .logo img {
+  height: 36px;
+}
+header .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  font-size: 16px;
+  gap: 17px;
+  font-weight: bold;
+  background-color: #EAEAEA;
+  filter: drop-shadow(1px 2px 5px grey);
+}
+
+.intro {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 20px;
+}
+
+.fonctionnement {
+  padding: 25px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 180px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+}
+.fonctionnement .liste_etapes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+  gap: 25px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement .liste_etapes {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 50px;
+  }
+}
+.fonctionnement .liste_etapes .etape {
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  height: 72px;
+  gap: 20px;
+  width: 100%;
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+}
+.fonctionnement .liste_etapes .etape .rond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9356DC;
+  border: solid 1px #9356DC;
+  color: white;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  margin-left: -10px;
+}
+.fonctionnement .liste_etapes .etape i {
+  color: #7E7E7E;
+  height: 20px;
+}
+.fonctionnement .liste_etapes .etape .etape_texte {
+  font-weight: bold;
+}
+.fonctionnement .liste_etapes .etape:hover i {
+  color: #9356DC;
+}
+
+.restaurant {
+  padding: 20px;
+  background-color: #F6F6F6;
+}
+@media screen and (min-width: 768px) {
+  .restaurant {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 30px 0;
+  }
+  .restaurant h2 {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 180px;
+    box-sizing: border-box;
+    margin: 30px auto;
+  }
+}
+.restaurant .liste_restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant .liste_restaurants {
+    max-width: 1440px;
+    padding: 0 180px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 0 auto;
+  }
+}
+.restaurant .liste_restaurants .card {
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .restaurant .liste_restaurants .card {
+    width: calc(48% - 20px);
+  }
+}
+.restaurant .liste_restaurants .card a {
+  color: black;
+}
+.restaurant .liste_restaurants .card a .image-restaurant {
+  height: 200px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+}
+.restaurant .liste_restaurants .card a .nouveau {
+  height: 29px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.restaurant .liste_restaurants .card a .card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.restaurant .liste_restaurants .card a .card-content .detail {
+  font-size: 17px;
+}
+.restaurant .liste_restaurants .card a .card-content .detail h3 {
+  padding: 0;
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+.restaurant .liste_restaurants .card .heart {
+  width: 23px;
+  height: 21px;
+  position: absolute;
+  right: 30px;
+  bottom: 35px;
+  background-image: url("../images/heart.png");
+  cursor: pointer;
+}
+.restaurant .liste_restaurants .card .heart:active {
+  transition-duration: 400ms;
+  background-image: url("../images/heart-filled.png");
+}
+
+footer {
+  padding: 25px;
+  background-color: #353535;
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+footer img {
+  height: 27px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  line-height: 30px;
+}
+@media screen and (min-width: 768px) {
+  footer ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-right: 25px;
+    gap: 25px;
+  }
+}
+footer ul a {
+  text-decoration: none;
+  color: white;
+}
+footer ul a i {
+  width: 14px;
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=style-restaurant.css.map */
