@@ -1,71 +1,7 @@
-@keyframes spinAnimation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes cssAnimation {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes cssAnimation2 {
-  0% {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  position: absolute;
-  color: black;
-  animation: cssAnimation 2s forwards;
-  text-align: center;
-}
-.loader i {
-  animation: spinAnimation 1s infinite;
-  animation-timing-function: linear;
-  display: inline-block;
-  color: black;
-  font-size: 60px;
-}
-
 body {
   font: 100% "Raleway", sans-serif;
   color: black;
   margin: 0;
-}
-
-button {
-  background: linear-gradient(#FF79DA, #9356DC);
-  height: 50px;
-  border-radius: 25px;
-  border: none;
-  color: white;
-  font-weight: bold;
-  padding: 0 25px 0 25px;
-  cursor: pointer;
-}
-button:hover {
-  opacity: 0.85;
 }
 
 a {
@@ -78,98 +14,58 @@ a {
 
 header {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+}
+header .retour {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
 }
 header .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 63px;
+  width: 100%;
 }
 header .logo img {
   height: 36px;
 }
-header .location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 63px;
-  font-size: 16px;
-  gap: 17px;
-  font-weight: bold;
-  background-color: #EAEAEA;
-  filter: drop-shadow(1px 2px 5px grey);
-}
 
-.intro {
-  background-color: #F6F6F6;
+.intro_restaurant {
   text-align: center;
-  padding: 20px;
 }
-
-.fonctionnement {
-  padding: 25px;
-  margin-bottom: 20px;
+.intro_restaurant img {
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
 }
-@media screen and (min-width: 768px) {
-  .fonctionnement {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 180px;
-    box-sizing: border-box;
-    margin: 0 auto;
-  }
-}
-.fonctionnement .liste_etapes {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10px;
-  gap: 25px;
-}
-@media screen and (min-width: 768px) {
-  .fonctionnement .liste_etapes {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 35px;
-    margin-bottom: 50px;
-  }
-}
-.fonctionnement .liste_etapes .etape {
+.intro_restaurant .titre_restaurant {
+  position: absolute;
+  top: 275px;
+  width: 100%;
   display: flex;
   align-items: center;
   background-color: #F6F6F6;
-  border-radius: 20px;
-  height: 72px;
-  gap: 20px;
-  width: 100%;
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
 }
-.fonctionnement .liste_etapes .etape .rond {
+.intro_restaurant .titre_restaurant h1 {
+  margin-left: 17px;
+  font-family: "Shrikhand";
+  font-size: 28px;
+}
+.intro_restaurant .titre_restaurant .heart {
   display: flex;
   align-items: center;
-  justify-content: center;
-  background-color: #9356DC;
-  border: solid 1px #9356DC;
-  color: white;
-  border-radius: 50%;
-  height: 24px;
-  width: 24px;
-  margin-left: -10px;
+  width: 23px;
+  height: 21px;
+  background-image: url("../images/heart.png");
+  cursor: pointer;
 }
-.fonctionnement .liste_etapes .etape i {
-  color: #7E7E7E;
-  height: 20px;
-}
-.fonctionnement .liste_etapes .etape .etape_texte {
-  font-weight: bold;
-}
-.fonctionnement .liste_etapes .etape:hover i {
-  color: #9356DC;
+.intro_restaurant .titre_restaurant .heart:active {
+  transition-duration: 400ms;
+  background-image: url("../images/heart-filled.png");
 }
 
 .restaurant {
