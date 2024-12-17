@@ -134,29 +134,29 @@ header .logo img {
   transition-duration: 400ms;
   background-image: url("../images/heart-filled.png");
 }
-.menu .entree_titre {
+.menu .titre {
   padding-left: 17px;
 }
-.menu .entree_titre h3 {
+.menu .titre h3 {
   font-weight: 400;
 }
-.menu .entree_titre .separator {
+.menu .titre .separator {
   display: block;
   background-color: #99E2D0;
   height: 3px;
   width: 40px;
 }
-.menu .liste_entrees {
+.menu .liste_plats {
   display: flex;
   flex-direction: column;
   list-style: none;
   padding: 0 17px 0 17px;
   gap: 12px;
 }
-.menu .liste_entrees li {
+.menu .liste_plats li {
   display: flex;
 }
-.menu .liste_entrees li a {
+.menu .liste_plats li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -172,7 +172,7 @@ header .logo img {
   transition: background-color 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   width: 100%;
 }
-.menu .liste_entrees li a .contenu {
+.menu .liste_plats li a .contenu {
   font-size: 15px;
   font-weight: bold;
   line-height: 25px;
@@ -184,11 +184,11 @@ header .logo img {
   flex: 1;
   box-sizing: border-box;
 }
-.menu .liste_entrees li a .contenu h4 {
+.menu .liste_plats li a .contenu h4 {
   font-size: 18px;
   margin: 0;
 }
-.menu .liste_entrees li a .prix {
+.menu .liste_plats li a .prix {
   font-size: 18px;
   font-weight: bold;
   position: relative;
@@ -196,7 +196,7 @@ header .logo img {
   flex-shrink: 0;
   transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.menu .liste_entrees li a .valide {
+.menu .liste_plats li a .valide {
   position: absolute;
   top: 0;
   right: -59px;
@@ -210,22 +210,22 @@ header .logo img {
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   transform: scaleX(0);
 }
-.menu .liste_entrees li a .valide i {
+.menu .liste_plats li a .valide i {
   color: white;
   font-size: 20px;
 }
-.menu .liste_entrees li a:hover {
+.menu .liste_plats li a:hover {
   background-color: #f0f0f0;
 }
-.menu .liste_entrees li a:hover .valide {
+.menu .liste_plats li a:hover .valide {
   right: 0;
   opacity: 1;
   transform: scaleX(1);
 }
-.menu .liste_entrees li a:hover .prix {
+.menu .liste_plats li a:hover .prix {
   transform: translateX(-59px);
 }
-.menu .liste_entrees li a:hover .contenu {
+.menu .liste_plats li a:hover .contenu {
   max-width: calc(100% - 59px - 70px);
 }
 .menu .commande {

@@ -112,7 +112,7 @@ header .location {
   padding: 25px;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 950px) {
   .fonctionnement {
     display: flex;
     justify-content: center;
@@ -131,7 +131,7 @@ header .location {
   padding-left: 10px;
   gap: 25px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 950px) {
   .fonctionnement .liste_etapes {
     flex-direction: row;
     justify-content: space-between;
@@ -150,7 +150,9 @@ header .location {
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
 }
 .fonctionnement .liste_etapes .etape .rond {
-  display: flex;
+  display: block;
+  position: absolute;
+  text-align: center;
   align-items: center;
   justify-content: center;
   background-color: #9356DC;
@@ -162,6 +164,7 @@ header .location {
   margin-left: -10px;
 }
 .fonctionnement .liste_etapes .etape i {
+  margin-left: 30px;
   color: #7E7E7E;
   height: 20px;
 }
@@ -176,7 +179,7 @@ header .location {
   padding: 20px;
   background-color: #F6F6F6;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 950px) {
   .restaurant {
     display: flex;
     flex-direction: column;
@@ -196,7 +199,7 @@ header .location {
   gap: 18px;
   margin-bottom: 35px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 950px) {
   .restaurant .liste_restaurants {
     max-width: 1440px;
     padding: 0 180px;
@@ -214,7 +217,7 @@ header .location {
   border-radius: 20px;
   position: relative;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 950px) {
   .restaurant .liste_restaurants .card {
     width: calc(48% - 20px);
   }
@@ -270,7 +273,7 @@ footer {
   font-size: 16px;
   font-weight: 500;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 950px) {
   footer {
     display: flex;
     justify-content: flex-start;
@@ -286,7 +289,7 @@ footer ul {
   padding: 0;
   line-height: 30px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 950px) {
   footer ul {
     display: flex;
     justify-content: flex-start;
