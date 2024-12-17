@@ -7,18 +7,43 @@ $purple: #9356DC;
 $icon-grey:#7E7E7E;
 $footer-background:#353535;
 
+$duration: 0.5s;
+$ease: cubic-bezier(0.25, 0.8, 0.25, 1);
+
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 body
 {
     font: 100% $font-main;
     color: $primary-color;
     margin: 0;
 }
+button {
+    background:$button-color;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 0 25px 0 25px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.85;
+    }
+}
 a {
     text-decoration: none;
 }
-.main-container {
-    animation: cssAnimation2 2s forwards;
-}
+
 header 
 {
     display: flex;
@@ -40,27 +65,58 @@ header
     }
 }
 .banner_restaurant {
-
+    position: relative;
     text-align: center;
+    z-index: 0;
     img {
         height:275px;
         width: 100%;
         object-fit: cover;
+        @media screen and (min-width: 768px) {
+            height:383px;
+        }
     }
 }
+
+    .entree, .plats, .desserts {
+        opacity: 0;
+        animation: fadeInUp 1s ease-out forwards;
+    }
+
+    .entree {
+        animation-delay: 0.5s;
+    }
+
+    .plats {
+        animation-delay: 1s;
+    }
+
+    .desserts {
+        animation-delay: 1.5s;
+    }
+
+
 .menu {
     display: flex;
+    flex: 1;
     flex-direction: column;
     background-color: $background-light-grey;
     margin-top: -50px;
     width: 100%;
-
+    position: relative;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    @media screen and (min-width: 768px) {
+        max-width: 1055px;
+        margin: 0 auto;
+        margin-top: -50px;
+    }
     .header_menu
     {
         width: 100%;
+        .titre_restaurant {
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
-        .titre_restaurant {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -80,6 +136,7 @@ header
             height: 21px;
             background-image: url("../images/heart.png");
             cursor: pointer;
+            margin-right: 30px;
             &:active
             {
                 transition-duration: 400ms;
@@ -89,8 +146,9 @@ header
     }
     }
 
-    .entree {
+   
         .entree_titre {
+            padding-left: 17px;
             h3 {
                 font-weight:400;
             }
@@ -111,49 +169,96 @@ header
             li {
                 display: flex;
                 a {
-                padding: 17px;
-                background-color: white;
-                border-radius: 20px;
-                display: flex;
-                justify-content: space-between;
-                font-size: 15px;
-                line-height: 25px;
-                filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.1));
-                text-decoration: none;
-                color: black;
-                width: 100%;
-                    h4 {
+                    display: flex;
+                    justify-content: space-between; // Répartit l'espace entre les éléments
+                    align-items: center;
+                    text-decoration: none;
+                    color: black;
+                    position: relative;
+                    background-color: white;
+                    border-radius: 20px;
+                    padding: 17px;
+                    overflow: hidden;
+                    filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.1));
+                    cursor: pointer;
+                    transition: background-color $duration $ease;
+                    width: 100%;
+                    .contenu {
+                      font-size: 15px;
+                      font-weight: bold;
+                      line-height: 25px;
+                      font-weight: 400;
+                      min-width: 0;
+                      white-space: nowrap; 
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      flex: 1;
+                     // padding-right: 70px;
+                        box-sizing: border-box; 
+                      h4 {
                         font-size: 18px;
                         margin: 0;
+                      }
                     }
+                  
                     .prix {
-                        display: flex;
-                        align-items: flex-end;
-                        justify-content: flex-end;
-                        font-weight: bold;
+                      font-size: 18px;
+                      font-weight: bold;
+                      position: relative;
+                        z-index: 1;
+                        flex-shrink: 0;
+                      transition: transform $duration $ease;
                     }
-                    &:hover + .valide {
-                        transform: translate(100%, 0);
-                        display: flex;
+                  
+                    .valide {
+                      position: absolute;
+                      top: 0;
+                      right: -59px;
+                      width: 59px;
+                      height: 100%;
+                      background-color:#99E2D0;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      opacity: 0;
+                      transition: all $duration $ease;
+                      transform: scaleX(0);
+                  
+                      i {
+                        color: white;
+                        font-size: 20px;
+                      }
                     }
+                  
+                    &:hover {
+                      background-color: #f0f0f0;
+                    }
+                  
+                    &:hover .valide {
+                      right: 0;
+                      opacity: 1;
+                      transform: scaleX(1);
+                    }
+                  
+                    &:hover .prix {
+                      transform: translateX(-59px);
+                    }
+                    &:hover .contenu {
+                        max-width: calc(100% - 59px - 70px);
+                      }
                 }
-                .valide {
-                    display: none;
-                    align-items: center;
-                    justify-content: center;
-                    background-color:#99E2D0;
-                    color: white;
-                    width: 59px;
-                    border-top-right-radius: 20px;
-                    border-bottom-right-radius: 20px;
-                    transition: transform 330ms ease-in-out;
-                }
+               
             }
         }
+    .commande {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 22px;
+        margin-bottom: 40px;
     }
+    
 }
-
-
 
 footer {
     padding: 25px;
