@@ -36,10 +36,9 @@ header {
   display: flex;
 }
 header .retour {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   padding-left: 10px;
+  position: absolute;
+  top: 15px;
 }
 header .logo {
   display: flex;
@@ -145,6 +144,7 @@ header .logo img {
   background-color: #99E2D0;
   height: 3px;
   width: 40px;
+  margin-top: -10px;
 }
 .menu .liste_plats {
   display: flex;

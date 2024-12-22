@@ -6,7 +6,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes cssAnimation {
+@keyframes affichagePage {
   0% {
     opacity: 1;
   }
@@ -17,7 +17,7 @@
     opacity: 0;
   }
 }
-@keyframes cssAnimation2 {
+@keyframes suppressionLoader {
   0% {
     opacity: 0;
   }
@@ -37,7 +37,7 @@
   margin: auto;
   position: absolute;
   color: black;
-  animation: cssAnimation 2s forwards;
+  animation: affichagePage 2s forwards;
   text-align: center;
 }
 .loader i {
@@ -73,7 +73,7 @@ a {
 }
 
 .main-container {
-  animation: cssAnimation2 2s forwards;
+  animation: suppressionLoader 2s forwards;
 }
 
 header {

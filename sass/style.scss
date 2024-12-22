@@ -6,6 +6,7 @@ $purple: #9356DC;
 $icon-grey:#7E7E7E;
 $footer-background:#353535;
 
+//animation du loader
 @keyframes spinAnimation {
     0% {
         transform: rotate(0deg);
@@ -15,12 +16,14 @@ $footer-background:#353535;
         transform: rotate(360deg);
     }
 }
-@keyframes cssAnimation {
+//Affichage progressif de la page
+@keyframes affichagePage {
     0%   {opacity: 1;}
     90%  {opacity: 1;}
     100% {opacity: 0;}
 }
-@keyframes cssAnimation2 {
+//suppression progressif du spinner
+@keyframes suppressionLoader {
     0%   {opacity: 0;}
     90%  {opacity: 0;}
     100% {opacity: 1;}
@@ -35,13 +38,13 @@ $footer-background:#353535;
     margin: auto;
     position: absolute;
     color: black;
-    animation: cssAnimation 2s forwards;
+    animation: affichagePage 2s forwards;
     text-align: center;
     i {
         animation: spinAnimation 1s infinite;
         animation-timing-function: linear;
         display: inline-block;
-        color: black;
+        color: $primary-color;
         font-size: 60px;
     }
 }
@@ -69,7 +72,7 @@ a {
     text-decoration: none;
 }
 .main-container {
-    animation: cssAnimation2 2s forwards;
+    animation: suppressionLoader 2s forwards;
 }
 header 
 {
@@ -142,8 +145,8 @@ header
                 text-align: center;
                 align-items: center;
                 justify-content: center;
-                background-color: #9356DC;
-                border: solid 1px #9356DC;
+                background-color:$purple;
+                border: solid 1px $purple;
                 color: white;
                 border-radius: 50%; 
                 height: 24px;

@@ -10,6 +10,7 @@ $footer-background:#353535;
 $duration: 0.5s;
 $ease: cubic-bezier(0.25, 0.8, 0.25, 1);
 
+// Animation d'affichage du menu progressif
 @keyframes fadeInUp {
     0% {
       opacity: 0;
@@ -48,10 +49,9 @@ header
 {
     display: flex;
     .retour {
-        display: flex;
-        justify-content:flex-start;
-        align-items: center;
-        padding-left: 10px;;
+        padding-left: 10px;
+        position: absolute;
+        top: 15px;
     }
     .logo {
         display: flex;
@@ -157,6 +157,7 @@ header
                 background-color: #99E2D0;
                 height: 3px;
                 width: 40px;
+                margin-top: -10px;
             }
         }
         .liste_plats {
@@ -165,12 +166,11 @@ header
             list-style: none;
             padding: 0 17px 0 17px;
             gap: 12px;
-            
             li {
                 display: flex;
                 a {
                     display: flex;
-                    justify-content: space-between; // Répartit l'espace entre les éléments
+                    justify-content: space-between;
                     align-items: center;
                     text-decoration: none;
                     color: black;
@@ -193,8 +193,7 @@ header
                       overflow: hidden;
                       text-overflow: ellipsis;
                       flex: 1;
-                     // padding-right: 70px;
-                        box-sizing: border-box; 
+                    box-sizing: border-box; 
                       h4 {
                         font-size: 18px;
                         margin: 0;
