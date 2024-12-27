@@ -128,9 +128,9 @@ header .logo img {
   background-image: url("../images/heart.png");
   cursor: pointer;
   margin-right: 30px;
+  transition: background-image 400ms;
 }
 .menu .header_menu .titre_restaurant .heart:active {
-  transition-duration: 400ms;
   background-image: url("../images/heart-filled.png");
 }
 .menu .titre {

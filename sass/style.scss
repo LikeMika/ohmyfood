@@ -247,9 +247,10 @@ header
                 bottom: 35px;
                 background-image: url("../images/heart.png");
                 cursor: pointer;
+                //Modification pour avoir le retour d'animation quand l'utilisateur relache le click
+                transition: background-image 400ms;
                 &:active
                 {
-                    transition-duration: 400ms;
                     background-image: url("../images/heart-filled.png");
                 }
             }

@@ -261,9 +261,9 @@ header .location {
   bottom: 35px;
   background-image: url("../images/heart.png");
   cursor: pointer;
+  transition: background-image 400ms;
 }
 .restaurant .liste_restaurants .card .heart:active {
-  transition-duration: 400ms;
   background-image: url("../images/heart-filled.png");
 }
 
